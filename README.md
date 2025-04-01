@@ -20,11 +20,48 @@
 
 ## Installation
 
+### Precompiled Executable
+
 1. **Download the latest release**:  
    You can download the precompiled `.exe` file from the [Releases](https://github.com/hygef-v4/plugin-organizer/releases) page.
 
 2. **Run the Program**:  
    Simply double-click the downloaded `PluginOrganizer.exe` file to launch the application.
+
+### Build the Executable Using PyInstaller
+
+If you want to build the executable from the source, follow these steps:
+
+1. **Install PyInstaller**:
+   Make sure you have **PyInstaller** installed. You can install it using pip:
+
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. **Run PyInstaller Command**:  
+   In your terminal or command prompt, navigate to your project directory and run the following command to create the executable:
+
+   ```bash
+   pyinstaller --noconfirm --onefile --windowed --name "PluginOrganizer" --icon "E:\script code\app_icon.ico" --clean --uac-admin --add-data "E:\script code\app_icon.ico;app-icon" "E:\script code\plugin_organizer.py"
+   ```
+
+   ### Explanation of the PyInstaller Flags:
+   - `--noconfirm`: Automatically confirms any prompts during the build process.
+   - `--onefile`: Packages the script and all dependencies into a single executable file.
+   - `--windowed`: Prevents the terminal window from appearing when the executable is run (useful for GUI-based applications).
+   - `--name "PluginOrganizer"`: Specifies the name of the final executable file.
+   - `--icon "E:\script code\app_icon.ico"`: Adds an icon to the executable.
+   - `--clean`: Cleans temporary files generated during the build process.
+   - `--uac-admin`: Requests Administrator rights when running the executable (for system folder access).
+   - `--add-data`: Includes additional files (like the icon file) in the packaged executable.
+   - `"E:\script code\plugin_organizer.py"`: Path to the Python script you want to convert.
+
+3. **Locate the Executable**:  
+   After running the command, PyInstaller will create a `dist` folder in your project directory. Inside the `dist` folder, you’ll find the `PluginOrganizer.exe` file that you can distribute and run.
+
+4. **Run the Executable**:  
+   Navigate to the `dist` folder and double-click the `PluginOrganizer.exe` to run the application.
 
 ## Usage
 
@@ -55,4 +92,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 3. Commit your changes (`git commit -m 'Add new feature'`).
 4. Push to the branch (`git push origin feature-branch`).
 5. Open a pull request.
-
