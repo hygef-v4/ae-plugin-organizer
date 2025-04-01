@@ -43,7 +43,7 @@ If you want to build the executable from the source, follow these steps:
    In your terminal or command prompt, navigate to your project directory and run the following command to create the executable:
 
    ```bash
-pyinstaller --noconfirm --onefile --windowed --name "PluginOrganizer" --icon "C:\path\to\your\app_icon.ico" --clean --uac-admin --add-data "C:\path\to\your\app_icon.ico;app-icon" "C:\path\to\your\plugin_organizer.py"
+   pyinstaller --noconfirm --onefile --windowed --name "PluginOrganizer" --icon "C:\path\to\your\app_icon.ico" --clean --uac-admin --add-data "C:\path\to\your\app_icon.ico;app-icon" "C:\path\to\your\plugin_organizer.py"
    ```
 
    ### Explanation of the PyInstaller Flags:
@@ -51,11 +51,11 @@ pyinstaller --noconfirm --onefile --windowed --name "PluginOrganizer" --icon "C:
    - `--onefile`: Packages the script and all dependencies into a single executable file.
    - `--windowed`: Prevents the terminal window from appearing when the executable is run (useful for GUI-based applications).
    - `--name "PluginOrganizer"`: Specifies the name of the final executable file.
-   - `--icon "E:\script code\app_icon.ico"`: Adds an icon to the executable.
+   - `--icon "C:\path\to\your\app_icon.ico"`: Adds an icon to the executable.
    - `--clean`: Cleans temporary files generated during the build process.
    - `--uac-admin`: Requests Administrator rights when running the executable (for system folder access).
    - `--add-data`: Includes additional files (like the icon file) in the packaged executable.
-   - `"E:\script code\plugin_organizer.py"`: Path to the Python script you want to convert.
+   - `"C:\path\to\your\plugin_organizer.py"`: Path to the Python script you want to convert.
 
 3. **Locate the Executable**:  
    After running the command, PyInstaller will create a `dist` folder in your project directory. Inside the `dist` folder, you’ll find the `PluginOrganizer.exe` file that you can distribute and run.
