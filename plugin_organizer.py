@@ -1,4 +1,3 @@
-# --- [PREVIOUS CODE: imports, admin check, globals, logging - REMAINS THE SAME] ---
 import os
 import shutil
 import tkinter as tk
@@ -39,7 +38,6 @@ def log_action(message):
 
 # --- Core Logic ---
 
-# CORRECTED compute_moves function
 def compute_moves(directory, prefix, suffix):
     """
     Compute moves for .aex files and their associated items (files/folders).
@@ -131,14 +129,12 @@ def compute_moves(directory, prefix, suffix):
                     target_folder_path = aex_base_to_target_folder[aex_base_lower]
                     target_folder_basename = os.path.basename(target_folder_path) # Get name of folder to be created
 
-                    # ***** THE FIX: Check for self-move *****
                     if item_is_folder and item_name == target_folder_basename:
                         log_action(f"Skipping associated Folder: '{item_name}' because its name matches the target folder name derived from '{aex_base_lower}.aex'.")
                         # Also mark as processed so it doesn't get matched again later by mistake
                         processed_items.add(item_name)
                         break # Stop checking other bases for this specific item
 
-                    # ***** END FIX *****
 
                     # If not skipped, add the move
                     destination_item = os.path.join(target_folder_path, item_name)
@@ -163,8 +159,6 @@ def compute_moves(directory, prefix, suffix):
     return moves
 
 
-# --- [UNCHANGED FUNCTIONS: execute_moves, preview_moves, undo_moves, select_directory, run_preview, show_help, show_history_log] ---
-# [These functions remain exactly the same as in the previous full code response]
 
 # execute_moves function (no changes)
 def execute_moves(moves):
@@ -238,7 +232,6 @@ def execute_moves(moves):
             if "into itself" in str(e):
                 log_action(f"Error (Self-Move Detected): {error_msg}") # Log specifically
                 messagebox.showerror("Move Error", f"Cannot move '{os.path.basename(source)}' into itself. This usually means a folder with the same name as the plugin already exists. The move for this folder has been skipped.")
-                # Don't break here, allow other moves to continue if possible
                 continue # Skip to the next move
             else:
                  log_action(f"Error: {error_msg}")
