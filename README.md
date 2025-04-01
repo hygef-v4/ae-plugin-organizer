@@ -20,7 +20,7 @@
   
 ## Demo Video
 
-[![Plugin Organizer Demo](https://nofilmschool.com/media-library/top-adobe-after-effects-plugins.jpg?id=34070193&width=1200&height=600&coordinates=0%2C60%2C0%2C60)](https://www.youtube.com/watch?v=60oyiwYYKsw)
+[![Plugin Organizer Demo](https://nofilmschool.com/media-library/top-adobe-after-effects-plugins.jpg?id=34070193&width=1200&height=600&coordinates=0%2C60%2C0%2C60)](https://youtu.be/-9tZ8Z3yuXk)
 
 ## Installation
 
