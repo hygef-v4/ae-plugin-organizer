@@ -17,6 +17,10 @@
 - **Windows** operating system.
 - **Administrator rights** for system folders (required for certain operations).
 - A **backup** of your plugin folder is recommended before making any changes.
+  
+## Demo Video
+
+[![Plugin Organizer Demo](https://nofilmschool.com/media-library/top-adobe-after-effects-plugins.jpg?id=34070193&width=1200&height=600&coordinates=0%2C60%2C0%2C60)](https://www.youtube.com/watch?v=60oyiwYYKsw)
 
 ## Installation
 
