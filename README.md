@@ -43,7 +43,7 @@ If you want to build the executable from the source, follow these steps:
    In your terminal or command prompt, navigate to your project directory and run the following command to create the executable:
 
    ```bash
-   pyinstaller --noconfirm --onefile --windowed --name "PluginOrganizer" --icon "E:\script code\app_icon.ico" --clean --uac-admin --add-data "E:\script code\app_icon.ico;app-icon" "E:\script code\plugin_organizer.py"
+pyinstaller --noconfirm --onefile --windowed --name "PluginOrganizer" --icon "C:\path\to\your\app_icon.ico" --clean --uac-admin --add-data "C:\path\to\your\app_icon.ico;app-icon" "C:\path\to\your\plugin_organizer.py"
    ```
 
    ### Explanation of the PyInstaller Flags:
